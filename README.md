@@ -1,1 +1,7 @@
 # HttpClient
+
+I built a basic web client as part of this project. Despite the fact that Python comes with a rudimentary http client module called "http.client," this project translates a protocol into an implementation. The final product is a client that just implements the GET method and complies with the fundamental requirements of the HTTP/1.1 protocol, which is all that is required to download files using the command-line tool curl.
+
+The project will construct a function called "retrieve url," which accepts a url (as a "str") as its sole parameter and retrieves and returns the body's bytes through the HTTP protocol (do not decode those bytes into a string). Presuming that a fragment, query string, or authentication information won't be present in the URL. It is only obliged to return bytes when the server responds with a status code of "200 OK." It is not required to follow any redirects. 'retrieve url' should return 'None' if, for any reason, your software is unable to correctly retrieve the resource.
+
+When calling a list of URLs, the testing script will compare the implementation of the "retrieve url" function with an accurate one. Making that the output from my function matches the known-correct output that the testing script has fetched.
